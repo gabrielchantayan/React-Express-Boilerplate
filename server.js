@@ -34,10 +34,9 @@ const main = () => {
 	app.use(express.urlencoded({ extended: true }));
 
 	// Listen to API routes
-	app.use('/api/rentalReports', routes.rentalReports);
-	app.use('/api/accounts', routes.accounts);
-	app.use('/api/commissions', routes.commissions);
-	app.use('/api/units', routes.units);
+	for (let key of Object.keys(routes)) {
+		app.use(`/api/${key}`, routes[key]);
+	}
 
 	// If we are in prod, use the build folder
 	if (process.env.NODE_ENV == 'prod') {
