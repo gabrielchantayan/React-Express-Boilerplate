@@ -11,6 +11,7 @@
   "scripts": {
     "dev-server": "nodemon -r dotenv/config --trace-warnings server.js dotenv_config_path=./.env.dev -e js",
     "dev-client": "npm start --prefix client",
+    "build": "npm run build --prefix client",
     "dev": "concurrently \"npm run dev-server\" \"npm run dev-client\"",
     "generateAPI": "node ./devtools/tools/generateAPI.js"
   },

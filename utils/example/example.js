@@ -1,4 +1,4 @@
-import { successHandler as s } from '../misc/miscUtils';
+import { successHandler as s } from '../misc/miscUtils.js';
 
 // Exmaple file
 
