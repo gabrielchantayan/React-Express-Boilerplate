@@ -1,0 +1,29 @@
+{
+    "exampleRoutes" : {
+        "getExample" : {
+            "name" : "GET Example",
+            "description" : "Example GET Route",
+            "params" : [],
+            "type" : "GET",
+            "primaryFunctionFile" : "utils/example/example.js",
+            "primaryFunction" : "getExample"
+        },
+
+        "postExample": {
+            "name": "POST Example",
+            "description": "Example POST Route",
+            "type": "POST",
+            "primaryFunctionFile": "utils/example/example.js",
+            "primaryFunction": "postExample"
+        },
+
+        "alternativeEndpointExample": {
+            "name": "Alternative Example",
+            "description": "This route uses an alternative endpoint",
+            "endpoint": "foo/bar",
+            "type": "POST",
+            "primaryFunctionFile": "utils/example/example.js",
+            "primaryFunction": "getExample"
+        }
+    }
+}
