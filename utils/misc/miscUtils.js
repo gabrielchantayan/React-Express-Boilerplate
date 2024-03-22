@@ -17,4 +17,13 @@ const successHandler = (success, message, data) => {
 	return ret;
 };
 
-export { successHandler };
+/**
+ * Shorthand function to stringify JSON
+ * @param {Object} json JSON object to prettify
+ * @returns Stringified JSON
+ */
+const stringifyJSON = (json) => {
+	return JSON.stringify(json, null, 2); 
+}
+
+export { successHandler, stringifyJSON };
