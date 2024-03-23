@@ -52,7 +52,7 @@ const generateControllerFile = async (route, endpoint, data) => {
 	let file = 
 `import asyncWrapper from '../../middleware/asyncWrapper.js';
 import { ${data.primaryFunction} as mainFunction } from '../../${data.primaryFunctionFile}';
-import { successHandler as s } from '../../utils/misc/miscUtils.js';
+import { successHandler } from '../../utils/misc/miscUtils.js';
 
 // ${data.name}
 // ${data.description}
@@ -60,10 +60,7 @@ const ${endpoint} = asyncWrapper(async (req, res) => {
 
     const ret = await mainFunction(req);
 
-    res.status(200).json({
-        success: true,
-        data: ret,
-    });
+    res.status(200).json(successHandler(true, null, ret));
 
 });
 
@@ -72,6 +69,7 @@ export default ${endpoint};
 
 	// Write the file
 	await writeFile(`./controllers/${route}/${endpoint}.js`, file);
+	console.log(`Wrote ./controllers/${route}/${endpoint}.js`);
 };
 
 /**
@@ -98,6 +96,7 @@ const generateControllerIndexFile = async (route, endpoints) => {
 
 	// Write the file
 	await writeFile(`./controllers/${route}/index.js`, file);
+	
 };
 
 /**
@@ -150,8 +149,6 @@ const generateRouteIndexFile = async (routes) => {
 \t${routes.join(',\n\t')}
 };
 `;
-
-	console.log(file);
 
 	/// Write the file
 	await writeFile(`./routes/index.js`, file);

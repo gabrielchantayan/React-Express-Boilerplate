@@ -1,10 +1,10 @@
 import asyncWrapper from '../../middleware/asyncWrapper.js';
-import { getExample as mainFunction } from '../../utils/example/example.js';
+import { login as mainFunction } from '../../utils/accounts/accounts.js';
 import { successHandler } from '../../utils/misc/miscUtils.js';
 
-// GET Example
-// Example GET Route
-const getExample = asyncWrapper(async (req, res) => {
+// Login
+// Logs in a user
+const login = asyncWrapper(async (req, res) => {
 
     const ret = await mainFunction(req);
 
@@ -12,4 +12,4 @@ const getExample = asyncWrapper(async (req, res) => {
 
 });
 
-export default getExample;
+export default login;

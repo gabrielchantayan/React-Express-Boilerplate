@@ -5,5 +5,5 @@ import alternativeEndpointExample from './alternativeEndpointExample.js';
 export default {
 	getExample,
 	postExample,
-	alternativeEndpointExample,
+	alternativeEndpointExample
 };
