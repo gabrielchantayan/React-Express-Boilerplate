@@ -13,19 +13,21 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
 	{
+		path: '/',
 		element: (
 			<>
 				<AppBar />
+				<Outlet />
 			</>
 		),
 		children: [
 			{
-				path: '/',
+				index: true,
 				element: <pages.Homepage />,
 			},
 			{
-				path: '/addrecipe',
-				element: <pages.AddRecipe />,
+				path: '/page1',
+				element: <pages.PageOne />,
 			},
 		],
 	},

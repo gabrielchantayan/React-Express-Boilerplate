@@ -1,5 +1,3 @@
-import { Icon } from '@iconify/react';
-import { Button, Container, Typography } from '@mui/joy';
 import React, { useEffect } from 'react';
 
 
@@ -31,44 +29,8 @@ export default function PageOne(params) {
 	// console.log(lll)
 
 	return (
-		<Container>
-			<Typography level='h1' sx={{ mt: 3 }}>
-				Internal Tools
-			</Typography>
-			<Typography level='subtitle1'>
-				Various tools and quick links to speed up workflow
-			</Typography>
-
-			<Button
-				Button
-				sx={{ mt: 3 }}
-				onClick={goToLogin}
-				variant='contained'>
-				Log In  
-				<Icon className='icon' icon={'mdi:account'} />
-			</Button>
-
-			{/* {
-                pages && (
-
-                    pages.map(page => {
-
-
-                        return (
-
-                            <HomepageItem data={
-                                {
-                                    name: page.name,
-                                    icon: page.icon,
-                                    permissions: page.permissions,
-                                    description: page.description,
-                                    url: page.url
-                                }} />
-                        )
-
-                    })
-                )
-            } */}
-		</Container>
+		<div>
+			<p>Page 1!</p>
+		</div>
 	);
 }
