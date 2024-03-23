@@ -1,4 +1,4 @@
-import * as db from '../db/mongo.js';
+import * as db from '../database/mongo.js';
 import { successHandler } from '../misc/miscUtils.js';
 import * as password from './password.js';
 import { checkPermission } from './permissions.js';

@@ -1,5 +1,5 @@
 import asyncWrapper from '../../middleware/asyncWrapper.js';
-import { getUserPerms as mainFunction } from '../../utils/accounts/accounts.js';
+import { getUserPermissions as mainFunction } from '../../utils/accounts/permissions.js';
 import { successHandler } from '../../utils/misc/miscUtils.js';
 
 // Get User Permissions

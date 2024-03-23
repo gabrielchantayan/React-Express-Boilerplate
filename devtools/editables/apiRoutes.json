@@ -43,8 +43,8 @@
 			"name": "Get User Permissions",
 			"description": "Gets a user's permissions, returned as an array",
 			"type": "POST",
-			"primaryFunctionFile": "utils/accounts/accounts.js",
-			"primaryFunction": "getUserPerms"
+			"primaryFunctionFile": "utils/accounts/permissions.js",
+			"primaryFunction": "getUserPermissions"
 		},
 		"updateAccount": {
 			"name": "Update Account",
